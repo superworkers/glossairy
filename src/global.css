@@ -1,0 +1,36 @@
+:root {
+  --space-clamp: clamp(1.5rem, 3vw, 2rem);
+}
+
+.fill {
+  flex: 1;
+}
+
+.layer-inset {
+  max-width: 60rem;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  gap: 0.5rem;
+  letter-spacing: -0.06em;
+}
+
+.logo i {
+  font-size: 2rem;
+}
+
+.row {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+section .layer-inset {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-clamp);
+}

@@ -1,32 +1,197 @@
-<section id="hero" class="layer">
+<section class="layer" id="hero">
   <div class="layer-inset">
-    <div class="chip">
-      <div class="dot"></div>
-      Accepting early access
-    </div>
-    <h1>De nada, friend!</h1>
-    <p>Let us do the first hour together, shall we?</p>
-    <a class="button button-primary" href="/app/">Get started</a>
+    <h1>The language is the problem.</h1>
+    <p>
+      AI literacy doesn't mean learning more words. It means understanding which ones matter, which ones mislead, and
+      which ones you can safely ignore. Glossairy clarifies AI language so teams can think clearly, communicate
+      honestly, and make better decisions.
+    </p>
   </div>
 </section>
 
-<section id="applet" class="layer">
+<section class="layer" id="legend">
   <div class="layer-inset">
-    <div class="browser">
-      <div class="browser-bar"></div>
-      <div class="browser-viewport"></div>
+    <div class="legend-row">
+      <span class="legend-item"><span class="swatch swatch-use"></span> Use this word — it's clear and useful</span>
+      <span class="legend-item"><span class="swatch swatch-know"></span> Know this word — useful with context</span>
+      <span class="legend-item"
+        ><span class="swatch swatch-avoid"></span> Avoid this word — it misleads or confuses</span
+      >
     </div>
   </div>
 </section>
 
-<section id="hard-sell" class="layer">
+<section class="layer" id="glossary">
   <div class="layer-inset">
-    <div class="chip">
-      <div class="dot"></div>
-      Accepting early access
+    <div class="group">
+      <h3>What AI actually does</h3>
+      <div class="terms">
+        <div class="term use">
+          <h4>Model</h4>
+          <p>
+            Software trained on data to recognize patterns and generate outputs. The core building block of modern AI.
+          </p>
+          <div class="aliases">Also: language model, LLM, foundation model</div>
+        </div>
+        <div class="term use">
+          <h4>Prompt</h4>
+          <p>The input you give a model — a question, instruction, or example — to get a useful output back.</p>
+        </div>
+        <div class="term use">
+          <h4>Training</h4>
+          <p>
+            The process of exposing a model to large amounts of data so it can learn patterns. Happens once, before you
+            use it.
+          </p>
+        </div>
+        <div class="term use">
+          <h4>Inference</h4>
+          <p>
+            The moment a trained model actually runs — generating a response to your prompt. What happens every time you
+            use AI.
+          </p>
+        </div>
+        <div class="term know">
+          <h4>Fine-tuning</h4>
+          <p>
+            Additional training on a smaller, specific dataset to adapt a general model to a particular task or style.
+          </p>
+          <div class="aliases">Also: RLHF, instruction tuning, alignment</div>
+        </div>
+        <div class="term know">
+          <h4>Context window</h4>
+          <p>
+            How much text a model can "see" at once — its working memory. Larger windows let you include more in a
+            single conversation.
+          </p>
+          <div class="aliases">Also: context length, token limit</div>
+        </div>
+        <div class="term know">
+          <h4>Token</h4>
+          <p>
+            The unit models use to process text — roughly a word or part of a word. Pricing and limits are usually
+            measured in tokens.
+          </p>
+        </div>
+        <div class="term avoid">
+          <h4>Thinking</h4>
+          <p>
+            Models process inputs and produce outputs. Whether that constitutes thinking is a philosophical debate, not
+            a technical description.
+          </p>
+          <div class="aliases">Also: understanding, reasoning, knowing</div>
+        </div>
+      </div>
     </div>
-    <h1>This is the hard sell</h1>
-    <p>We aren’t guaranteed tomorrow. What are you waiting for?</p>
-    <a class="button button-primary" href="/app/">Get started</a>
+
+    <div class="group">
+      <h3>How it gets things wrong</h3>
+      <div class="terms">
+        <div class="term use">
+          <h4>Hallucination</h4>
+          <p>
+            When a model confidently generates something that isn't true. Important to understand because it's the
+            default failure mode, not a rare bug.
+          </p>
+          <div class="aliases">Also: confabulation</div>
+        </div>
+        <div class="term use">
+          <h4>Bias</h4>
+          <p>
+            Patterns in training data that lead to skewed, unfair, or unrepresentative outputs. A real and measurable
+            problem.
+          </p>
+        </div>
+        <div class="term know">
+          <h4>Alignment</h4>
+          <p>
+            The effort to make AI behave in ways humans intend. Important concept, but often used loosely to mean very
+            different things.
+          </p>
+          <div class="aliases">Also: safety, guardrails, RLHF</div>
+        </div>
+        <div class="term know">
+          <h4>RAG</h4>
+          <p>
+            Retrieval-augmented generation. A technique that gives a model access to external documents at inference
+            time, reducing hallucination.
+          </p>
+          <div class="aliases">Also: retrieval, grounding, knowledge base</div>
+        </div>
+        <div class="term know">
+          <h4>Embedding</h4>
+          <p>
+            A way to represent text as numbers so software can compare meaning — used for search, recommendations, and
+            clustering.
+          </p>
+          <div class="aliases">Also: vector, semantic search</div>
+        </div>
+        <div class="term avoid">
+          <h4>Copilot</h4>
+          <p>
+            A branded metaphor that's become generic. Vague enough to mean anything from autocomplete to a full AI
+            assistant.
+          </p>
+          <div class="aliases">Also: AI assistant, AI companion</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="group">
+      <h3>How people talk about it</h3>
+      <div class="terms">
+        <div class="term know">
+          <h4>Open source / open weight</h4>
+          <p>
+            Models whose code or weights are publicly available. "Open source" is often used loosely — open weights is
+            more precise.
+          </p>
+          <div class="aliases">Also: Llama, Mistral, open model</div>
+        </div>
+        <div class="term avoid">
+          <h4>AGI</h4>
+          <p>
+            Artificial general intelligence. A hypothetical future AI that can do anything a human can. Speculative,
+            undefined, and used more for fundraising than clarity.
+          </p>
+          <div class="aliases">Also: superintelligence, strong AI</div>
+        </div>
+        <div class="term avoid">
+          <h4>Sentient</h4>
+          <p>
+            Having feelings or awareness. No current AI system is sentient. Using this word about AI actively undermines
+            credibility.
+          </p>
+          <div class="aliases">Also: conscious, alive, thinking</div>
+        </div>
+        <div class="term avoid">
+          <h4>Singularity</h4>
+          <p>
+            A hypothetical point where AI surpasses human intelligence and accelerates beyond control. Science fiction,
+            not strategy.
+          </p>
+        </div>
+        <div class="term avoid">
+          <h4>Reasoning</h4>
+          <p>
+            Models can produce outputs that look like reasoning. Whether they actually reason is an open debate. Using
+            this word uncritically overstates what's happening.
+          </p>
+          <div class="aliases">Also: thinking, understanding, chain-of-thought</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="layer" id="cta">
+  <div class="layer-inset">
+    <h2>Clearer words. Better decisions.</h2>
+    <p>
+      Use Glossairy as a shared reference for your team — for clearer thinking, better narratives, and more effective
+      go-to-market conversations.
+    </p>
+    <a class="button" href="#">Share this glossary</a>
+    <p class="fine">Free. No account required. Link directly to any term.</p>
   </div>
 </section>
