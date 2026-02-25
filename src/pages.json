@@ -4,5 +4,10 @@
     "og-image": "/og.png",
     "og-url": "https://glossairy.com",
     "title": "Glossairy — AI Language, Clarified"
+  },
+  "more": {
+    "description": "Every AI term in Glossairy, expanded — with definitions, examples, and Matt's commentary.",
+    "og-url": "https://glossairy.com/more/",
+    "title": "More — Glossairy"
   }
 }

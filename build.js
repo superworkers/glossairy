@@ -16,6 +16,8 @@ const isDev = process.argv.includes('--dev')
 const repoName = getRepoName()
 const basePath = isDev || fs.existsSync('CNAME') ? '/' : `/${repoName}/`
 
+const extend = fs.existsSync('build.extend.js') ? require('./build.extend.js') : null
+
 const build = () => {
   fs.rmSync(buildDir, { force: true, recursive: true })
   fs.mkdirSync(buildDir, { recursive: true })
@@ -36,6 +38,7 @@ const build = () => {
       content,
       scripts,
       styles,
+      ...(extend ? extend({ content, pageDir, pageName, basePath }) : {}),
       ...(pages['index'] || {}),
       ...(pages[pageName] || {}),
     }
@@ -104,7 +107,10 @@ const build = () => {
         copyAsset(dir, targetDir, `${htmlFileName}.css`)
         copyAsset(dir, targetDir, `${htmlFileName}.js`)
       } else {
-        const shouldSkip = entry.name.match(/\.(css|js)$/) && htmlFiles.includes(entry.name.replace(/\.(css|js)$/, ''))
+        const shouldSkip =
+          entry.name.endsWith('.md') ||
+          entry.name === 'tree.json' ||
+          (entry.name.match(/\.(css|js)$/) && htmlFiles.includes(entry.name.replace(/\.(css|js)$/, '')))
 
         if (!shouldSkip) {
           fs.copyFileSync(srcPath, path.join(outputDir, entry.name))

@@ -1,0 +1,65 @@
+[
+  {
+    "label": "Basics",
+    "slugs": [
+      "agent",
+      "browser-use",
+      "computer-use",
+      "context-window",
+      "in-context-learning",
+      "model",
+      "open",
+      "prompt",
+      "reasoning",
+      "structured",
+      "tools"
+    ]
+  },
+  {
+    "label": "Dichotomy",
+    "slugs": [
+      "agentics",
+      "automation",
+      "branding",
+      "chatgpt",
+      "cognition",
+      "data",
+      "deterministic",
+      "execution",
+      "graphical",
+      "interface",
+      "language",
+      "llm",
+      "logic",
+      "openai",
+      "probabilistic",
+      "rag",
+      "retrieval",
+      "software",
+      "structured-data",
+      "supervised",
+      "textual",
+      "training",
+      "unstructured-data",
+      "unsupervised"
+    ]
+  },
+  {
+    "label": "Pathology",
+    "slugs": ["cargo-cult", "disingenuous-selection", "workslop"]
+  },
+  {
+    "label": "Innovation",
+    "slugs": [
+      "fidelity-of-desire",
+      "intent-preservation",
+      "mingentic",
+      "ontological-self",
+      "rapid-monologue",
+      "superwork",
+      "unicorn",
+      "vibe-coding",
+      "virtual-employee"
+    ]
+  }
+]

@@ -16,6 +16,7 @@
   --color-light: rgba(255, 255, 255, 0.1); /* 1a - 10% */
   --color-lighter: rgba(255, 255, 255, 0.05); /* 0d - 5% */
   --color-lightest: rgb(0, 0, 17); /* #001 */
+  color: var(--color-darkest);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -98,6 +99,11 @@ h4 {
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.01em;
+  line-height: 1.25rem;
+}
+
+p {
+  font-size: 14px;
   line-height: 1.25rem;
 }
 
@@ -275,6 +281,7 @@ hr {
   background: var(--color-lighter);
   border: none;
   height: 1px;
+  width: 100%;
 }
 
 /* Font Sample */
@@ -700,6 +707,14 @@ hr {
 /* Utilities */
 .fill {
   flex: 1;
+}
+
+.smallcaps {
+  color: var(--color-half);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .masonry {

@@ -1,197 +1,333 @@
-<section class="layer" id="hero">
-  <div class="layer-inset">
-    <h1>The language is the problem.</h1>
-    <p>
-      AI literacy doesn't mean learning more words. It means understanding which ones matter, which ones mislead, and
-      which ones you can safely ignore. Glossairy clarifies AI language so teams can think clearly, communicate
-      honestly, and make better decisions.
-    </p>
-  </div>
+<section id="hero">
+  <div id="hero-bg"></div>
+  <div id="hero-fade"></div>
 </section>
 
-<section class="layer" id="legend">
+<section id="glossary" class="layer">
   <div class="layer-inset">
-    <div class="legend-row">
-      <span class="legend-item"><span class="swatch swatch-use"></span> Use this word — it's clear and useful</span>
-      <span class="legend-item"><span class="swatch swatch-know"></span> Know this word — useful with context</span>
-      <span class="legend-item"
-        ><span class="swatch swatch-avoid"></span> Avoid this word — it misleads or confuses</span
-      >
-    </div>
-  </div>
-</section>
-
-<section class="layer" id="glossary">
-  <div class="layer-inset">
-    <div class="group">
-      <h3>What AI actually does</h3>
-      <div class="terms">
-        <div class="term use">
-          <h4>Model</h4>
+    <main>
+      <h2>Basics</h2>
+      <div class="words">
+        <div class="word">
+          <h3>Agent</h3>
+          <ul class="synonyms">
+            <li class="know">agentic</li>
+          </ul>
+          <p>
+            A model given tools, memory, and a goal — then left to reason through the steps. The leap from answering
+            questions to completing work.
+          </p>
+        </div>
+        <div class="word">
+          <h3>Browser use</h3>
+          <p>
+            A model that navigates the web like a human — clicking, scrolling, filling forms. Turns any website into an
+            API.
+          </p>
+        </div>
+        <div class="word">
+          <h3>Computer use</h3>
+          <p>
+            A model that controls a computer directly — mouse, keyboard, screen. The most general-purpose form of
+            agentic capability.
+          </p>
+        </div>
+        <div class="word">
+          <h3>Context window</h3>
+          <p>The amount of text a model can hold in working memory at once. Everything outside it doesn't exist.</p>
+        </div>
+        <div class="word">
+          <h3>In context learning</h3>
+          <ul class="synonyms">
+            <li class="know">AGENTS.md</li>
+            <li class="know">CLAUDE.md</li>
+            <li class="know"><abbr title="In-context learning">ICL</abbr></li>
+            <li class="know">memory</li>
+          </ul>
+          <p>
+            Teaching a model by example within the prompt itself — no retraining required. The basis for few-shot
+            prompting and persistent instructions.
+          </p>
+        </div>
+        <div class="word">
+          <h3>Model</h3>
+          <ul class="synonyms">
+            <li class="know">foundation model</li>
+            <li class="know">language model</li>
+            <li class="know"><abbr title="Large language model">LLM</abbr></li>
+          </ul>
           <p>
             Software trained on data to recognize patterns and generate outputs. The core building block of modern AI.
           </p>
-          <div class="aliases">Also: language model, LLM, foundation model</div>
         </div>
-        <div class="term use">
-          <h4>Prompt</h4>
-          <p>The input you give a model — a question, instruction, or example — to get a useful output back.</p>
-        </div>
-        <div class="term use">
-          <h4>Training</h4>
+        <div class="word">
+          <h3>Open</h3>
+          <ul class="synonyms">
+            <li class="know">free</li>
+            <li class="know">open source</li>
+            <li class="know">open weight</li>
+          </ul>
           <p>
-            The process of exposing a model to large amounts of data so it can learn patterns. Happens once, before you
-            use it.
+            Models whose weights are publicly available. "Open source" is often used loosely — open weight is more
+            precise.
           </p>
         </div>
-        <div class="term use">
-          <h4>Inference</h4>
+        <div class="word">
+          <h3>Prompt</h3>
           <p>
-            The moment a trained model actually runs — generating a response to your prompt. What happens every time you
-            use AI.
+            The input you give a model. Every interaction starts here. Writing them well is the highest-leverage skill
+            in AI.
           </p>
         </div>
-        <div class="term know">
-          <h4>Fine-tuning</h4>
-          <p>
-            Additional training on a smaller, specific dataset to adapt a general model to a particular task or style.
-          </p>
-          <div class="aliases">Also: RLHF, instruction tuning, alignment</div>
+        <div class="word">
+          <h3>Reasoning</h3>
+          <ul class="synonyms">
+            <li class="know">chain-of-thought</li>
+            <li class="know">thinking</li>
+            <li class="know">understanding</li>
+          </ul>
+          <p>Models produce outputs that look like reasoning. Whether they actually reason is an open debate.</p>
         </div>
-        <div class="term know">
-          <h4>Context window</h4>
-          <p>
-            How much text a model can "see" at once — its working memory. Larger windows let you include more in a
-            single conversation.
-          </p>
-          <div class="aliases">Also: context length, token limit</div>
+        <div class="word">
+          <h3>Structured</h3>
+          <ul class="synonyms">
+            <li class="know">JSON</li>
+            <li class="know">schema</li>
+            <li class="know">structured output</li>
+          </ul>
+          <p>Output formatted to a predictable shape so software can reliably parse and use it.</p>
         </div>
-        <div class="term know">
-          <h4>Token</h4>
+        <div class="word">
+          <h3>Tools</h3>
+          <ul class="synonyms">
+            <li class="know">function calling</li>
+            <li class="know"><abbr title="Model Context Protocol">MCP</abbr></li>
+            <li class="know">tool use</li>
+          </ul>
           <p>
-            The unit models use to process text — roughly a word or part of a word. Pricing and limits are usually
-            measured in tokens.
+            The ability for a model to call external functions — search, code execution, APIs — and use the results.
           </p>
-        </div>
-        <div class="term avoid">
-          <h4>Thinking</h4>
-          <p>
-            Models process inputs and produce outputs. Whether that constitutes thinking is a philosophical debate, not
-            a technical description.
-          </p>
-          <div class="aliases">Also: understanding, reasoning, knowing</div>
         </div>
       </div>
-    </div>
 
-    <div class="group">
-      <h3>How it gets things wrong</h3>
-      <div class="terms">
-        <div class="term use">
-          <h4>Hallucination</h4>
-          <p>
-            When a model confidently generates something that isn't true. Important to understand because it's the
-            default failure mode, not a rare bug.
-          </p>
-          <div class="aliases">Also: confabulation</div>
+      <hr />
+      <h2>Dichotomy</h2>
+      <div class="dichotomy">
+        <div class="word"><h3>Branding</h3></div>
+        <div class="word">
+          <h3>ChatGPT</h3>
+          <p>The product. A consumer interface built by OpenAI.</p>
         </div>
-        <div class="term use">
-          <h4>Bias</h4>
-          <p>
-            Patterns in training data that lead to skewed, unfair, or unrepresentative outputs. A real and measurable
-            problem.
-          </p>
-        </div>
-        <div class="term know">
-          <h4>Alignment</h4>
-          <p>
-            The effort to make AI behave in ways humans intend. Important concept, but often used loosely to mean very
-            different things.
-          </p>
-          <div class="aliases">Also: safety, guardrails, RLHF</div>
-        </div>
-        <div class="term know">
-          <h4>RAG</h4>
-          <p>
-            Retrieval-augmented generation. A technique that gives a model access to external documents at inference
-            time, reducing hallucination.
-          </p>
-          <div class="aliases">Also: retrieval, grounding, knowledge base</div>
-        </div>
-        <div class="term know">
-          <h4>Embedding</h4>
-          <p>
-            A way to represent text as numbers so software can compare meaning — used for search, recommendations, and
-            clustering.
-          </p>
-          <div class="aliases">Also: vector, semantic search</div>
-        </div>
-        <div class="term avoid">
-          <h4>Copilot</h4>
-          <p>
-            A branded metaphor that's become generic. Vague enough to mean anything from autocomplete to a full AI
-            assistant.
-          </p>
-          <div class="aliases">Also: AI assistant, AI companion</div>
+        <div class="word">
+          <h3>OpenAI</h3>
+          <p>The company. Conflating them is like saying "I use Google" when you mean Gmail.</p>
         </div>
       </div>
-    </div>
-
-    <div class="group">
-      <h3>How people talk about it</h3>
-      <div class="terms">
-        <div class="term know">
-          <h4>Open source / open weight</h4>
-          <p>
-            Models whose code or weights are publicly available. "Open source" is often used loosely — open weights is
-            more precise.
-          </p>
-          <div class="aliases">Also: Llama, Mistral, open model</div>
+      <div class="dichotomy">
+        <div class="word"><h3>Cognition</h3></div>
+        <div class="word">
+          <h3>Language</h3>
+          <p>Models are trained on language and produce fluent text.</p>
         </div>
-        <div class="term avoid">
-          <h4>AGI</h4>
+        <div class="word">
+          <h3>Logic</h3>
           <p>
-            Artificial general intelligence. A hypothetical future AI that can do anything a human can. Speculative,
-            undefined, and used more for fundraising than clarity.
+            Fluent text isn't the same as correct reasoning. Models can produce plausible conclusions that are
+            mathematically wrong.
           </p>
-          <div class="aliases">Also: superintelligence, strong AI</div>
-        </div>
-        <div class="term avoid">
-          <h4>Sentient</h4>
-          <p>
-            Having feelings or awareness. No current AI system is sentient. Using this word about AI actively undermines
-            credibility.
-          </p>
-          <div class="aliases">Also: conscious, alive, thinking</div>
-        </div>
-        <div class="term avoid">
-          <h4>Singularity</h4>
-          <p>
-            A hypothetical point where AI surpasses human intelligence and accelerates beyond control. Science fiction,
-            not strategy.
-          </p>
-        </div>
-        <div class="term avoid">
-          <h4>Reasoning</h4>
-          <p>
-            Models can produce outputs that look like reasoning. Whether they actually reason is an open debate. Using
-            this word uncritically overstates what's happening.
-          </p>
-          <div class="aliases">Also: thinking, understanding, chain-of-thought</div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+      <div class="dichotomy">
+        <div class="word"><h3>Data</h3></div>
+        <div class="word">
+          <h3>Structured data</h3>
+          <p>Databases and spreadsheets. Predictable shape, easy to query.</p>
+        </div>
+        <div class="word">
+          <h3>Unstructured data</h3>
+          <p>Emails, documents, conversations. Models are uniquely good at this.</p>
+        </div>
+      </div>
+      <div class="dichotomy">
+        <div class="word"><h3>Execution</h3></div>
+        <div class="word">
+          <h3>Agentics</h3>
+          <p>Prompts and models — adaptive, probabilistic, capable of handling the unexpected.</p>
+        </div>
+        <div class="word">
+          <h3>Automation</h3>
+          <p>Loops and scripts — predictable, brittle, deterministic.</p>
+        </div>
+      </div>
+      <div class="dichotomy">
+        <div class="word"><h3>Interface</h3></div>
+        <div class="word">
+          <h3>Graphical</h3>
+          <p>Most software is built around visual interfaces designed for human interaction.</p>
+        </div>
+        <div class="word">
+          <h3>Textual</h3>
+          <p>AI-native software is often built around text — which changes everything about how you design it.</p>
+        </div>
+      </div>
+      <div class="dichotomy">
+        <div class="word"><h3>Retrieval</h3></div>
+        <div class="word">
+          <h3><abbr title="Large language model">LLM</abbr></h3>
+          <ul class="synonyms">
+            <li class="know">large language model</li>
+          </ul>
+          <p>Generates from memory alone.</p>
+        </div>
+        <div class="word">
+          <h3><abbr title="Retrieval-augmented generation">RAG</abbr></h3>
+          <ul class="synonyms">
+            <li class="know">grounding</li>
+            <li class="know">retrieval-augmented generation</li>
+          </ul>
+          <p>Retrieves relevant documents first, then generates — reducing hallucination at the cost of complexity.</p>
+        </div>
+      </div>
+      <div class="dichotomy">
+        <div class="word">
+          <h3>Software</h3>
+          <ul class="synonyms">
+            <li class="know">behavior</li>
+          </ul>
+        </div>
+        <div class="word">
+          <h3>Deterministic</h3>
+          <p>Code runs the same way every time.</p>
+        </div>
+        <div class="word">
+          <h3>Probabilistic</h3>
+          <p>The same prompt can produce different outputs. This is a feature and a bug.</p>
+        </div>
+      </div>
+      <div class="dichotomy">
+        <div class="word"><h3>Training</h3></div>
+        <div class="word">
+          <h3>Supervised</h3>
+          <p>Trains on labeled examples. The model learns to predict correct answers.</p>
+        </div>
+        <div class="word">
+          <h3>Unsupervised</h3>
+          <p>Finds patterns without labels. Most modern LLMs use both at different stages.</p>
+        </div>
+      </div>
 
-<section class="layer" id="cta">
-  <div class="layer-inset">
-    <h2>Clearer words. Better decisions.</h2>
-    <p>
-      Use Glossairy as a shared reference for your team — for clearer thinking, better narratives, and more effective
-      go-to-market conversations.
-    </p>
-    <a class="button" href="#">Share this glossary</a>
-    <p class="fine">Free. No account required. Link directly to any term.</p>
+      <hr />
+      <h2>Pathology</h2>
+      <div class="words">
+        <div class="word">
+          <h3>Cargo cult</h3>
+          <ul class="synonyms">
+            <li class="know">best practices</li>
+            <li class="know">prompt engineering</li>
+          </ul>
+          <p>Copying AI workflows or prompts without understanding why they work — or whether they do.</p>
+        </div>
+        <div class="word">
+          <h3>Disingenuous selection</h3>
+          <ul class="synonyms">
+            <li class="know">demo</li>
+            <li class="know">it just works</li>
+          </ul>
+          <p>
+            Only showing what works. It can take 1,000 attempts to get one result worth showing. Presenting that result
+            without disclosing the fail rate is technically true and 99.9% deceptive.
+          </p>
+          <a class="read-more" href="/disingenuous-selection/">Read more</a>
+        </div>
+        <div class="word">
+          <h3>Workslop</h3>
+          <ul class="synonyms">
+            <li class="know">AI content</li>
+            <li class="know">generated output</li>
+          </ul>
+          <p>When someone generates text they expect you to read but haven't read themselves.</p>
+          <a class="read-more" href="/workslop/">Read more</a>
+        </div>
+      </div>
+
+      <hr />
+      <h2>Innovation</h2>
+      <div class="words">
+        <div class="word">
+          <h3>Fidelity of desire</h3>
+          <p>
+            Do you really want an AI running your life? Adults make 35,000 decisions per day. Offloading them feels
+            efficient — until you realize presence was the point.
+          </p>
+          <a class="read-more" href="/fidelity-of-desire/">Read more</a>
+        </div>
+        <div class="word">
+          <h3>Intent preservation</h3>
+          <p>
+            Ensuring a model does what you actually meant, not just what you literally said. The gap between instruction
+            and execution is where most failures live.
+          </p>
+        </div>
+        <div class="word">
+          <h3>Mingentic</h3>
+          <p>
+            The minimum viable agentic unit. A focused model call with a clear input, constrained scope, and defined
+            output contract.
+          </p>
+        </div>
+        <div class="word">
+          <h3>Ontological self</h3>
+          <p>
+            The stable behavioral persona a model develops through training. Not consciousness — but a consistent point
+            of view that shapes every output.
+          </p>
+        </div>
+        <div class="word">
+          <h3>Rapid monologue</h3>
+          <p>
+            A model generating a long uninterrupted stream before acting. Trades responsiveness for depth — and depth
+            for hallucination risk.
+          </p>
+        </div>
+        <div class="word">
+          <h3>Superwork</h3>
+          <ul class="synonyms">
+            <li class="know">superworker</li>
+          </ul>
+          <p>
+            Work accelerated and expanded by agentics. Not automation — judgment and tools working together toward
+            outcomes that weren't possible before.
+          </p>
+        </div>
+        <div class="word">
+          <h3>Unicorn</h3>
+          <p>A person who can design, build, and ship. Rare before AI. Less rare now.</p>
+        </div>
+        <div class="word">
+          <h3>Vibe coding</h3>
+          <p>
+            Building software by describing what you want and letting a model write it. The craft shifts from syntax to
+            taste.
+          </p>
+        </div>
+        <div class="word">
+          <h3>Virtual employee</h3>
+          <ul class="synonyms">
+            <li class="know">virtual workforce</li>
+          </ul>
+          <p>
+            An agent with a defined role, responsibilities, and tools — not just a one-off task runner. The difference
+            between a contractor and a colleague.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <aside id="legend">
+      <div class="smallcaps">Legend</div>
+      <div class="legend-item use">Use this word</div>
+      <div class="legend-item know">Know this word</div>
+      <div class="legend-item avoid">Avoid this word</div>
+    </aside>
   </div>
 </section>
